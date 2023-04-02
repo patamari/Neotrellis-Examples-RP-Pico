@@ -31,7 +31,7 @@ void setup() {
   // while(!Serial) delay(1);
 
   Wire1.setSDA(I2C_SDA);
-	Wire1.setSCL(I2C_SCL);
+  Wire1.setSCL(I2C_SCL);
   
   if (!trellis.begin()) {
     Serial.println("Could not start trellis, check wiring?");
