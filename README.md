@@ -5,4 +5,4 @@ I recently built a Neotrellis Grid and wanted to test the seesaw boards before c
 
 Huge thanks to Denki Oto for making this happen.
 
-One other thing I noticed is that at certain brightness/colors, while running the multitrellis code was crashing and restarting the Pico before going through the startup animation. (I guess it draws too much current) I halved the color range to get around this.
+One other thing I noticed is that the multitrellis example would crash and loop my pico, depending on which USB port on my computer I was using. I guess some of the ports don't provide as much current.
