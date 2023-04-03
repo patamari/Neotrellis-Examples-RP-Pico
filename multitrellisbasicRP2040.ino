@@ -62,7 +62,7 @@ uint32_t Wheel(byte WheelPos) {
 TrellisCallback blink(keyEvent evt){
   
   if(evt.bit.EDGE == SEESAW_KEYPAD_EDGE_RISING)
-    trellis.setPixelColor(evt.bit.NUM, Wheel(map(evt.bit.NUM, 0, X_DIM*Y_DIM, 0, 255))); //on rising
+    trellis.setPixelColor(evt.bit.NUM, Wheel(map(evt.bit.NUM, 0, X_DIM*Y_DIM, 0, 100))); //on rising
   else if(evt.bit.EDGE == SEESAW_KEYPAD_EDGE_FALLING)
     trellis.setPixelColor(evt.bit.NUM, 0); //off falling
     
@@ -84,7 +84,7 @@ void setup() {
 
   /* the array can be addressed as x,y or with the key number */
   for(int i=0; i<Y_DIM*X_DIM; i++){
-      trellis.setPixelColor(i, Wheel(map(i, 0, X_DIM*Y_DIM, 0, 255))); //addressed with keynum
+      trellis.setPixelColor(i, Wheel(map(i, 0, X_DIM*Y_DIM, 0, 100))); //addressed with keynum
       trellis.show();
       delay(50);
   }
